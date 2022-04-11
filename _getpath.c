@@ -1,4 +1,5 @@
 #include "main.h"
+#include <stdio.h>
 
 char *_getpath(char *envp[], char *name)
 {
@@ -12,7 +13,7 @@ char *_getpath(char *envp[], char *name)
 		if (_strcmp(buffer[0], name) == 0)
 		{
 			path = malloc(sizeof(char) * _strlen(buffer[1]) + 1);
-			path = buffer[1];
+			_strcpy(path, buffer[1]);
 			_free_double(buffer);
 			return (path);
 		}
@@ -20,3 +21,13 @@ char *_getpath(char *envp[], char *name)
 	}
 	return (NULL);
 }
+/*
+int main(int argc, char *argv[], char *envp[])
+{
+	char *path;
+
+	path = _getpath(envp, "PATH");
+	write(1, path, 30);
+	free(path);
+	return (0);
+}*/
