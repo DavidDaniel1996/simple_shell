@@ -37,7 +37,7 @@ Our code should output this if the compilation process was succesfully completed
 
 ## Authors
 
-David Daniel Rodriguez Jimenez | @DavidDaniel1996(https://github.com/DavidDaniel1996)
-Jose Andres Fabre Lopez | @Joanfa7(https://github.com/Joanfa7)
+David Daniel Rodriguez Jimenez | [@DavidDaniel1996](https://github.com/DavidDaniel1996)
+Jose Andres Fabre Lopez | [@Joanfa7](https://github.com/Joanfa7)
 
 
