@@ -10,7 +10,7 @@
 
 The shell will be compiled with this flags:  
 
-gcc -Wall -Werror -Wextra -pedantic -std=gnu89 *.c -o hsh  
+**gcc -Wall -Werror -Wextra -pedantic -std=gnu89 *.c -o hsh**  
 
 ## Builtins
 
