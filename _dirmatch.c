@@ -14,7 +14,9 @@ char *_dirmatch(char* path, char* input)
 
 	dir = _tokenizer(path, ":");
 
+	temp = malloc(100);
 	temp = _strcat(slash, input);
+	temp = _strcat(temp, "\0");
 
 	struct stat info;
 

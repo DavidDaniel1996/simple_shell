@@ -28,12 +28,12 @@ int main(__attribute__((unused))int argc, __attribute__((unused))char *argv[], c
 			path = _getpath(envp, "PATH");
 			command = _tokenizer(lineptr, " \n");
 			string = _dirmatch(path, command[0]);
+			free(path);
+			path = NULL;
+			free(lineptr);
+			lineptr = NULL;
 			_exec(string, command, envp);	
 		}
 	}
-	_putchar('\n');
-	_free_double(command);
-	free(lineptr);
-	//lineptr = NULL;
-	exit(status);
+	return (0);
 }
