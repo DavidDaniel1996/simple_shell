@@ -43,8 +43,6 @@ int main(unused int argc, unused char *argv[], char *envp[])
 			lineptr = NULL;
 			if (_check_program(string) == 0)
 				_exec(string, command, envp);
-			else
-				perror("execve");
 		}
 	}
 	free(lineptr);
