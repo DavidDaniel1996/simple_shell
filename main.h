@@ -20,6 +20,8 @@ int _strcmp(char *s1, char *s2);
 int _strlen(char *s);
 char *_strcat(char *dest, char *src);
 char *_strcpy(char *dest, char *src);
-int _check_program(char *program);
+int _check_program(char *string);
+int _verifier(char *string);
+int _free_single(char *token);
 
 #endif
