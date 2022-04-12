@@ -44,6 +44,6 @@ int main(unused int argc, unused char *argv[], char *envp[])
 			_exec(string, command, envp);
 		}
 	}
-
+	free(lineptr);
 	return (0);
 }
