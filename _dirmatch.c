@@ -15,10 +15,8 @@ char *_dirmatch(char *path, char *input)
 	struct stat info;
 
 	dir = _tokenizer(path, ":");
-	if (input[0] != '/')
-	{
-		temp = _strcat(slash, input);
-	}
+
+	temp = _strcat(slash, input);
 
 	for (i = 0; dir[i] != NULL; i++)
 	{
