@@ -11,8 +11,6 @@ int _exec(char *string, char **command, char **envp)
 		if (execve(string, command, envp))
 		{
 			_free_double(command);
-			//free(string);
-			//string = NULL;
 			perror("execve");
 			exit(EXIT_FAILURE);
 		}

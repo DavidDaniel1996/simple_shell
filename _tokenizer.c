@@ -14,7 +14,7 @@ char **_tokenizer(char *string, char *delim)
 	{
 		return (NULL);
 	}
-	store = strcpy(store, string);
+	store = _strcpy(store, string);
 	tokens = malloc(sizeof(tokens));
 	if (tokens == NULL)
 	{
