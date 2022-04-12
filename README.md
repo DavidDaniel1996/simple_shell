@@ -1,11 +1,11 @@
 # 0x16.C - Simple Shell
 ![The Gates of Shell](https://s3.amazonaws.com/intranet-projects-files/holbertonschool-low_level_programming/235/shell.jpeg)  
 ## Description
-
+This project is our version of a simple shell. It aims to replicate some of the functionalities available in the regular shell.
 ## Return
-
+The program should return 0 if excecuted correctly.
 ## Prototype
-
+`this is a test`
 ## Compile
 
 The shell will be compiled with this flags:  
