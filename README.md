@@ -6,6 +6,11 @@ This project is our version of a simple shell. It aims to replicate some of the 
 The program should return 0 if excecuted correctly.
 ## Prototype
 `int main(unused int argc, unused char *argv[], char *envp[])`
+
+argc is the argument count passed in the command line. It is unused.
+argv is the argument vector passed in the command line. It is unused.
+envp contains the environment accessbile through the shell.
+
 ## Compile
 
 The shell will be compiled with this flags:  
