@@ -41,11 +41,7 @@ int main(unused int argc, unused char *argv[], char *envp[])
 			path = NULL;
 			free(lineptr);
 			lineptr = NULL;
-			if (_exec(string, command, envp) == -1)
-			{
-				write(1, command[0], _strlen(command[0]));
-				write(1, ": command not found\n", 20);
-			}
+			_exec(string, command, envp);
 		}
 	}
 	free(lineptr);
