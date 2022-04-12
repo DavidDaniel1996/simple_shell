@@ -12,21 +12,29 @@ int _exec(char *string, char **command, char **envp)
 {
 	pid_t pid;
 	int status;
+	struct stat info;
 
-	pid = fork();
-	if (pid == 0)
+	if (stat(string, &info) == 0)
 	{
-		if (execve(string, command, envp))
+		pid = fork();
+		if (pid == 0)
+		{
+			if (execve(string, command, envp))
+			{
+				_free_double(command);
+				perror("execve");
+				exit(EXIT_FAILURE);
+			}
+		}
+		if (pid > 0)
 		{
 			_free_double(command);
-			perror("execve");
-			exit(EXIT_FAILURE);
+			wait(&status);
 		}
 	}
-	if (pid > 0)
+	else
 	{
-		_free_double(command);
-		wait(&status);
+		return (-1);
 	}
 	return (0);
 }
