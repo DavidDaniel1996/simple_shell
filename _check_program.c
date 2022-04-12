@@ -1,6 +1,12 @@
 #include "main.h"
 
-int _check_program(char *string)
+/**
+ * _check_program- cheack if a program exist in PATH
+ * @program: progrma name
+ * Return: succes
+ */
+
+int _check_program(char *program)
 {
 	struct stat status;
 
