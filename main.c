@@ -22,7 +22,7 @@ int main(unused int argc, unused char *argv[], char *envp[])
 		if (_strcmp(lineptr, "exit\n") == 0)
 		{
 			free(lineptr);
-			exit(0);
+			exit(1);
 		}
 		else if (_strcmp(lineptr, "env\n") == 0)
 		{
