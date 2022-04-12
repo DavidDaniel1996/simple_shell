@@ -20,6 +20,7 @@ int main(unused int argc, unused char *argv[], char *envp[])
 			write(1, "$ ", 2);
 		if (getline(&lineptr, &n, stdin) == -1)
 			break;
+		/*
 		if (_strcmp(lineptr, "exit\n") == 0)
 		{
 			free(lineptr);
@@ -31,7 +32,7 @@ int main(unused int argc, unused char *argv[], char *envp[])
 			free(lineptr);
 			lineptr = NULL;
 			continue;
-		}
+		}*/
 		else
 		{
 			path = _getpath(envp, "PATH");
@@ -41,7 +42,10 @@ int main(unused int argc, unused char *argv[], char *envp[])
 			path = NULL;
 			free(lineptr);
 			lineptr = NULL;
-			_exec(string, command, envp);
+			if (_check_program(string) == 0)
+				_exec(string, command, envp);
+			else
+				perror("execve");
 		}
 	}
 	free(lineptr);
