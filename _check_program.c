@@ -1,10 +1,16 @@
 #include "main.h"
 
-int _check_program(char *string)
+/**
+ * _check_program - checks if program is valid before passing to execve
+ * @program: program to validate
+ * Return: 0 if valid, -1 otherwise
+ */
+
+int _check_program(char *program)
 {
 	struct stat status;
 
-	if (stat(string, &status) == 0)
+	if (stat(program, &status) == 0)
 	{
 		return (0);
 	}
