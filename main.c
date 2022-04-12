@@ -20,7 +20,7 @@ int main(unused int argc, unused char *argv[], char *envp[])
 			write(1, "$ ", 2);
 		if (getline(&lineptr, &n, stdin) == -1)
 			break;
-		if (_verifier(lineptr) == 0)
+		if (_verifier(lineptr, envp) == 0)
 		{
 			free(lineptr);
 			lineptr = NULL;
