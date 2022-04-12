@@ -14,9 +14,10 @@ int main(unused int argc, unused char *argv[], char *envp[])
 	char **command, *lineptr = NULL, *path = NULL, *string = NULL;
 	size_t n;
 
-	while (1)
+	while (1)	
 	{
-		write(1, "$ ", 2);
+		if (isatty(0))
+			write(1, "$ ", 2);
 		if (getline(&lineptr, &n, stdin) == -1)
 			break;
 		if (_strcmp(lineptr, "exit\n") == 0)
@@ -43,5 +44,6 @@ int main(unused int argc, unused char *argv[], char *envp[])
 			_exec(string, command, envp);
 		}
 	}
+
 	return (0);
 }
