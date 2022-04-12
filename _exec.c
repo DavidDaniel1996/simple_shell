@@ -1,5 +1,13 @@
 #include "main.h"
 
+/**
+ * _exec - executes valid command
+ * @string: string containing valid command
+ * @command: double pointer containing command arguments
+ * @envp: environment
+ * Return: 0 if succesful
+ */
+
 int _exec(char *string, char **command, char **envp)
 {
 	pid_t pid;
@@ -22,16 +30,3 @@ int _exec(char *string, char **command, char **envp)
 	}
 	return (0);
 }
-/*
-int main()
-{
-	char *command = "/bin/ls";
-	char **test;
-
-	test[0] = "a";
-	test[1] = "-l";
-
-	_exec(command, test, NULL);
-
-	return (0);
-}*/

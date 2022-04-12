@@ -1,12 +1,13 @@
 #include "main.h"
-#include <stdio.h>
-#include <unistd.h>
-#include <stdlib.h>
-#include <string.h>
-#include <sys/types.h>
-#include <sys/wait.h>
 
-char *_dirmatch(char* path, char* input)
+/**
+ * _dirmatch - matches command with correct directory in path
+ * @path: string containing the path
+ * @input: command to match with path
+ * Return: matched command if found, input if no match
+ */
+
+char *_dirmatch(char *path, char *input)
 {
 	char **dir;
 	char *command, *temp, storage[300], slash[77] = "/";

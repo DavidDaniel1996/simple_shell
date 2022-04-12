@@ -3,6 +3,13 @@
 #include <stdlib.h>
 #include <stdio.h>
 
+/**
+ * _tokenizer - tokenizes a string and returns it as a double pointer
+ * @string: string to be tokenized
+ * @delim: delimitor to be used to tokenize
+ * Return: double pointer if succesful
+ */
+
 char **_tokenizer(char *string, char *delim)
 {
 	char **tokens;
@@ -21,7 +28,7 @@ char **_tokenizer(char *string, char *delim)
 		return (NULL);
 	}
 	tokens[i] = strtok(store, delim);
-	while (tokens [i] != NULL)
+	while (tokens[i] != NULL)
 	{
 		i++;
 		tokens = realloc(tokens, (i + 1) * sizeof(tokens));
@@ -31,20 +38,6 @@ char **_tokenizer(char *string, char *delim)
 			return (NULL);
 		}
 		tokens[i] = strtok(NULL, delim);
-	}	
+	}
 	return (tokens);
 }
-/*
-int main()
-{
-	char *string = "ls";
-	char **buf;
-	int i;
-
-	buf = _tokenizer(string, " ");
-	for (i = 0; buf[i] != NULL; i++)
-		printf("%s\n", buf[i]);
-
-	_free_double(buf);
-	return (0);
-}*/

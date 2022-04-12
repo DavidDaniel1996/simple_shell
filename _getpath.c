@@ -1,6 +1,13 @@
 #include "main.h"
 #include <stdio.h>
 
+/**
+ * _getpath - goes to environment and extracts the path
+ * @envp: contains environment
+ * @name: name of the variable to extract (path)
+ * Return: path if succesful, NULL if failure
+ */
+
 char *_getpath(char *envp[], char *name)
 {
 	char **buffer, *path;
@@ -16,17 +23,8 @@ char *_getpath(char *envp[], char *name)
 			_free_double(buffer);
 			return (path);
 		}
-	_free_double(buffer);
+		_free_double(buffer);
 	}
 	return (NULL);
 }
-/*
-int main(int argc, char *argv[], char *envp[])
-{
-	char *path;
 
-	path = _getpath(envp, "PATH");
-	write(1, path, 30);
-	free(path);
-	return (0);
-}*/
