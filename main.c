@@ -41,10 +41,7 @@ int main(unused int argc, unused char *argv[], char *envp[])
 			path = NULL;
 			free(lineptr);
 			lineptr = NULL;
-			if (_check_program(string) == 0)
-				_exec(string, command, envp);
-			else
-				perror("execve");
+			_exec(string, command, envp);
 		}
 	}
 	free(lineptr);
