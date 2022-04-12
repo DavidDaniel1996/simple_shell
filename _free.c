@@ -24,18 +24,3 @@ int _free_double(char **token)
 	}
 	return (0);
 }
-
-/**
- * _free_single - frees a single pointer and sets it to NULL
- * @token: pointer to free
- * Return: 0 if succesful
- */
-
-int _free_single(char *token)
-{
-	if (token != NULL)
-	{
-		free(token);
-	}
-	return (0);
-}
