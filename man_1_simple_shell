@@ -1,0 +1,23 @@
+.TH man_1_simple_shell
+
+.Sh NAME
+.B Simple Shell
+Our command language interpreter
+
+.SH SYNOPSIS
+.B
+$ [command_file[argument...]]
+
+
+.SH DESCRIPTION
+.B
+The Simple Shell utility is a command language interpreter that shall execute commands read from  a command line string, the standard input, ot a specified file.
+
+.SH OPERANDS
+
+.SH ENVIORMENT VARIABLES
+.B ENV
+.P This variable, when and only when an interacive shell is invoked, shall be subjectred to expansion by the shell, and the resulting value shall be used as a pathname of a file containing shell commands to execute in the current environment.
+
+.B PATH
+.P This varibale shall represent the sequence of path prefixes at the time of login 
