@@ -5,7 +5,7 @@ This project is our version of a simple shell. It aims to replicate some of the 
 ## Return
 The program should return 0 if excecuted correctly.
 ## Prototype
-`this is a test`
+`int main(unused int argc, unused char *argv[], char *envp[])`
 ## Compile
 
 The shell will be compiled with this flags:  
