@@ -1,7 +1,7 @@
 # 0x16.C - Simple Shell
 ![The Gates of Shell](https://s3.amazonaws.com/intranet-projects-files/holbertonschool-low_level_programming/235/shell.jpeg)  
 
-##Descritpion
+## Descritpion
 This is a Simple command interpreter that replicates the shell.  
 
 ## Return
