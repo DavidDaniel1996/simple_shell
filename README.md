@@ -1,15 +1,21 @@
 # 0x16.C - Simple Shell
 ![The Gates of Shell](https://s3.amazonaws.com/intranet-projects-files/holbertonschool-low_level_programming/235/shell.jpeg)  
-## Description
-This project is our version of a simple shell. It aims to replicate some of the functionalities available in the regular shell.
-## Return
-The program should return 0 if excecuted correctly.
-## Prototype
-`int main(unused int argc, unused char *argv[], char *envp[])`
 
-Argc is the argument count passed in the command line. It is unused.
-Argv is the argument vector passed in the command line. It is unused.
-Envp contains the environment accessbile through the shell.
+##Descritpion
+This is a Simple command interpreter that replicates the shell.  
+
+## Return
+When succesfully compiled, the users promtp will be sent to seartyc the matching command line thta is meant to be excecuted, if the said command has no matches an error will be sent.  
+
+## Prototype
+1. char **_tokenizer(char *string, char *delim)  
+2. char *_getpath(char *envp[], char *name)  
+3. char *_dirmatch(char *path, char *input)  
+4. int _printenv(char *envp[])  
+5. int _free_double(char **token)  
+6. int _exec(char *string, char **command, char **envp)  
+7. int _check_program(char *string)  
+8. int _verifier(char *string, char **envp)  
 
 ## Compile
 
@@ -18,9 +24,28 @@ The shell will be compiled with this flags:
 **gcc -Wall -Werror -Wextra -pedantic -std=gnu89 \*.c -o hsh**  
 
 ## Builtins
+1. **env:** prints the current environment.
+2. **exit:** exit the shell.
 
-## Output
-Our code should output this if the compilation process was succesfully completed
+## Interactive mode:
+$ ./hsh  
+($) /bin/ls  
+hsh main.c shell.c  
+($)  
+($) exit  
+$  
+
+## Non-Interactive Mode:$ echo "/bin/ls" | ./hsh
+hsh main.c shell.c test_ls_2  
+$  
+$ cat test_ls_2  
+/bin/ls  
+/bin/ls  
+$  
+$ cat test_ls_2 | ./hsh  
+hsh main.c shell.c test_ls_2  
+hsh main.c shell.c test_ls_2  
+$  
 
 ## Learning Objectirves
 
