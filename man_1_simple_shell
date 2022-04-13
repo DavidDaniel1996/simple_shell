@@ -1,9 +1,9 @@
-.TH man_1_simple_shell
+.TH man 1 "April 12, 2022" "HSH"
 
-.Sh NAME
+.SH NAME
 .B Simple Shell
 Our command language interpreter
-
+.br
 .SH SYNOPSIS
 .B
 $ [command_file[argument...]]
@@ -12,12 +12,92 @@ $ [command_file[argument...]]
 .SH DESCRIPTION
 .B
 The Simple Shell utility is a command language interpreter that shall execute commands read from  a command line string, the standard input, ot a specified file.
-
-.SH OPERANDS
+.br
 
 .SH ENVIORMENT VARIABLES
 .B ENV
-.P This variable, when and only when an interacive shell is invoked, shall be subjectred to expansion by the shell, and the resulting value shall be used as a pathname of a file containing shell commands to execute in the current environment.
+.P 
+This variable, when and only when an interacive shell is invoked, shall be subjectred to expansion by the shell, and the resulting value shall be used as a pathname of a file containing shell commands to execute in the current environment.
+.br
 
 .B PATH
-.P This varibale shall represent the sequence of path prefixes at the time of login 
+.P 
+This varibale shall represent the sequence of path prefixes at the time of login
+.br
+
+.SH RETURN VALUE
+.brt
+.B shell
+Will return the contets of the command being requested or error if command dos not exits.
+.br
+
+.SH EXAMPLE
+
+.EE
+.P
+.HP 2
+.br
+.B $
+.br
+0-strcat.c  9-strcpy.c  _check_program.c  _free.c      _putchar.c    main.c
+2-strlen.c  AUTHORS     _dirmatch.c       _getpath.c   _tokenizer.c  main.h
+3-strcmp.c  README.md   _exec.c           _printenv.c  _verifier.c   man_1_simple_shell
+
+.P
+.HP 2
+.br
+.B $ ls -l
+.br
+$ ls -l
+.br
+total 92
+.br
+-rw-rw-r-- 1 vagrant vagrant   478 Apr 11 18:55 0-strcat.c
+.br
+-rw-rw-r-- 1 vagrant vagrant   311 Apr 11 18:55 2-strlen.c
+.br
+-rw-rw-r-- 1 vagrant vagrant   376 Apr 11 18:55 3-strcmp.c
+.br
+-rw-rw-r-- 1 vagrant vagrant   448 Apr 11 18:55 9-strcpy.c
+.br
+-rw-rw-r-- 1 vagrant vagrant   207 Apr 11 21:17 AUTHORS
+.br
+-rw-rw-r-- 1 vagrant vagrant  2264 Apr 13 03:15 README.md
+.br
+-rw-rw-r-- 1 vagrant vagrant   310 Apr 12 18:50 _check_program.c
+.br
+-rw-rw-r-- 1 vagrant vagrant   648 Apr 12 22:13 _dirmatch.c
+.br
+-rw-rw-r-- 1 vagrant vagrant   521 Apr 12 22:13 _exec.c
+.br
+-rw-rw-r-- 1 vagrant vagrant   360 Apr 12 22:13 _free.c
+.br
+-rw-rw-r-- 1 vagrant vagrant   599 Apr 12 22:13 _getpath.c
+.br
+-rw-rw-r-- 1 vagrant vagrant   274 Apr 12 13:09 _printenv.c
+.br
+-rw-rw-r-- 1 vagrant vagrant   247 Apr 12 13:09 _putchar.c
+.br
+-rw-rw-r-- 1 vagrant vagrant   852 Apr 12 22:13 _tokenizer.c
+.br
+-rw-rw-r-- 1 vagrant vagrant   499 Apr 13 02:25 _verifier.c
+.br
+-rwxrwxr-x 1 vagrant vagrant 18312 Apr 13 03:27 hsh
+.br
+-rw-rw-r-- 1 vagrant vagrant   911 Apr 13 02:25 main.c
+.br
+-rw-rw-r-- 1 vagrant vagrant   660 Apr 13 02:25 main.h
+.br
+-rwxrwxr-x 1 vagrant vagrant   696 Apr 12 22:13 man_1_simple_shell
+$
+
+.SH AUTHORS
+
+.br
+David Daniel Rodirguez Jimenez
+.B david.rodiguez@holbertonschool.com
+
+.br
+Jose Andres Fabre Lopez
+.B jose.fabre@holbertonschool.com
+

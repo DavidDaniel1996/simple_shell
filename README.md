@@ -8,14 +8,15 @@ This is a Simple command interpreter that replicates the shell.
 When succesfully compiled, the users promtp will be sent to seartyc the matching command line thta is meant to be excecuted, if the said command has no matches an error will be sent.  
 
 ## Prototype
-1. char **_tokenizer(char *string, char *delim)  
-2. char *_getpath(char *envp[], char *name)  
-3. char *_dirmatch(char *path, char *input)  
-4. int _printenv(char *envp[])  
-5. int _free_double(char **token)  
-6. int _exec(char *string, char **command, char **envp)  
-7. int _check_program(char *string)  
-8. int _verifier(char *string, char **envp)  
+1. int main(unused int argc, unused char *argv[], char *envp[]) 
+2. char **_tokenizer(char *string, char *delim)  
+3. char *_getpath(char *envp[], char *name)  
+4. char *_dirmatch(char *path, char *input)  
+5. int _printenv(char *envp[])  
+6. int _free_double(char **token)  
+7. int _exec(char *string, char **command, char **envp)  
+8. int _check_program(char *string)  
+9. int _verifier(char *string, char **envp)  
 
 ## Compile
 
